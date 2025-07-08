@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messages | HeartMatch</title>
+<link rel="stylesheet" href="message.css">
+</head>
+<body>
+    <div class="messages-container">
+        <!-- Sidebar with conversations -->
+        <div class="conversations-sidebar">
+            <div class="sidebar-header">
+                <h2>Messages</h2>
+                <button class="new-chat-btn">
+                    <i class="fas fa-plus"></i> New Chat
+                </button>
+            </div>
+            
+            <div class="search-bar">
+                <input type="text" placeholder="Search messages...">
+                <i class="fas fa-search"></i>
+            </div>
+            
+            <div class="conversation-list">
+                <!-- Active conversation -->
+                <div class="conversation active">
+                    <img src="profile1.jpg" alt="Sarah" class="profile-pic">
+                    <div class="conversation-details">
+                        <div class="conversation-header">
+                            <h3>Sarah</h3>
+                            <span class="time">2:30 PM</span>
+                        </div>
+                        <p class="last-message">Hey! How was your weekend?</p>
+                        <span class="unread-count">2</span>
+                    </div>
+                </div>
+                
+                <!-- Other conversations -->
+                <div class="conversation">
+                    <img src="profile2.jpg" alt="Mike" class="profile-pic">
+                    <div class="conversation-details">
+                        <div class="conversation-header">
+                            <h3>Mike</h3>
+                            <span class="time">Yesterday</span>
+                        </div>
+                        <p class="last-message">Let's meet for coffee tomorrow</p>
+                    </div>
+                </div>
+                
+                <div class="conversation">
+                    <img src="profile3.jpg" alt="Jessica" class="profile-pic">
+                    <div class="conversation-details">
+                        <div class="conversation-header">
+                            <h3>Jessica</h3>
+                            <span class="time">Monday</span>
+                        </div>
+                        <p class="last-message">Thanks for the great date!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main chat area -->
+        <div class="chat-area">
+            <div class="chat-header">
+                <div class="recipient-info">
+                    <img src="profile1.jpg" alt="Sarah" class="profile-pic">
+                    <div>
+                        <h3>Sarah</h3>
+                        <p class="online-status">Online</p>
+                    </div>
+                </div>
+                <div class="chat-actions">
+                    <button><i class="fas fa-phone"></i></button>
+                    <button><i class="fas fa-video"></i></button>
+                    <button><i class="fas fa-ellipsis-v"></i></button>
+                </div>
+            </div>
+            
+            <div class="message-container">
+                <!-- Date divider -->
+                <div class="date-divider">
+                    <span>Today</span>
+                </div>
+                
+                <!-- Received message -->
+                <div class="message received">
+                    <img src="profile1.jpg" alt="Sarah" class="profile-pic">
+                    <div class="message-content">
+                        <p>Hey there! How are you doing?</p>
+                        <span class="message-time">10:30 AM</span>
+                    </div>
+                </div>
+
+<!-- Sent message -->
+                <div class="message sent">
+                    <div class="message-content">
+                        <p>I'm great! Just finished work early today. How about you?</p>
+                        <span class="message-time">10:32 AM</span>
+                    </div>
+                </div>
+                
+                <!-- Received message -->
+                <div class="message received">
+                    <img src="profile1.jpg" alt="Sarah" class="profile-pic">
+                    <div class="message-content">
+                        <p>Nice! I'm free this weekend if you want to meet up?</p>
+                        <span class="message-time">2:30 PM</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="message-input">
+                <button class="emoji-btn"><i class="far fa-smile"></i></button>
+                <input type="text" placeholder="Type a message...">
+                <button class="send-btn"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="message.js"></script>
+</html>
+

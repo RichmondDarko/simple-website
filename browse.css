@@ -1,0 +1,434 @@
+:root {
+    --primary: #ff6b6b;
+    --primary-dark: #ff5252;
+    --secondary: #6b6bff;
+    --dark: #2e2e2e;
+    --light: #ffffff;
+    --gray: #f5f5f5;
+    --gray-dark: #e0e0e0;
+    --text: #333333;
+    --text-light: #777777;
+    --online: #4CAF50;
+    --offline: #f44336;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: var(--text);
+}
+
+.browse-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Search and Filters */
+.search-filters {
+    background-color: var(--light);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.search-bar {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 12px 20px;
+    border: 1px solid var(--gray-dark);
+    border-radius: 30px 0 0 30px;
+    outline: none;
+    font-size: 16px;
+}
+
+.search-bar button {
+    background-color: var(--primary);
+    color: var(--light);
+    border: none;
+    padding: 0 20px;
+    border-radius: 0 30px 30px 0;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.search-bar button:hover {
+    background-color: var(--primary-dark);
+}
+
+.filters {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.filter-group {
+    margin-bottom: 15px;
+}
+
+.filter-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--text-light);
+}
+
+.filter-group select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--gray-dark);
+    background-color: var(--light);
+}
+
+.age-range {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+
+.age-range span {
+    font-size: 12px;
+    color: var(--text-light);
+}
+
+.age-range input[type="range"] {
+    flex: 1;
+}
+
+.age-value {
+    text-align: center;
+    font-size: 14px;
+    color: var(--text);
+}
+
+.interest-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 5px;
+}
+
+.tag {
+    background-color: var(--gray);
+    color: var(--text);
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.tag:hover, .tag.
+
+*active {
+    background-color: var(--primary);
+    color: var(--light);
+}
+
+.apply-filters, .reset-filters {
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s;
+    margin-top: 10px;
+}
+
+.apply-filters {
+    background-color: var(--primary);
+    color: var(--light);
+}
+
+.apply-filters:hover {
+    background-color: var(--primary-dark);
+}
+
+.reset-filters {
+    background-color: var(--gray);
+    color: var(--text);
+}
+
+.reset-filters:hover {
+    background-color: var(--gray-dark);
+}
+
+/* Profiles Grid */
+.profiles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.profile-card {
+    background-color: var(--light);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s;
+}
+
+.profile-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.profile-image {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.profile-card:hover .profile-image img {
+    transform: scale(1.05);
+}
+
+.online-status {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: var(--online);
+    color: var(--light);
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.online-status.offline {
+    background-color: var(--offline);
+}
+
+.profile-info {
+    padding: 15px;
+}
+
+.profile-info h3 {
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+.profile-info p {
+    color: var(--text-light);
+    font-size: 14px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.profile-interests {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.profile-interests span {
+    background-color: var(--gray);
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 12px;
+}
+
+.profile-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.like-btn, .message-btn, .view-btn {
+    flex: 1;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.like-btn {
+    background-color: var(--gray);
+    color: var(--text-light);
+}
+
+.like-btn:hover, .like-btn.liked {
+    background-color: var(--primary);
+    color: var(--light);
+}
+
+.like-btn.liked i {
+    font-weight: 900;
+}
+
+.message-btn {
+    background-color: var(--secondary);
+    color: var(--light);
+}
+
+.message-btn:hover {
+    background-color: #5a5aff;
+}
+
+.view-btn {
+    background-color: transparent;
+    border: 1px solid var(--gray-dark);
+    color: var(--text);
+}
+
+.view-btn:hover {
+    background-color: var(--gray);
+}
+
+/* Load More Button */
+.load-more {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.load-more-btn {
+    background-color: var(--light);
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    padding: 12px 30px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+.load-more-btn:hover {
+    background-color: var(--primary);
+    color: var(--light);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .profiles-grid {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    }
+    
+    .filters {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .profiles-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .profile-image {
+        height: 200px;
+    }
+    
+    .profile-actions {
+        flex-direction: column;
+    }
+}
+/* Interest Tags Styling */
+.interest-tags-container {
+    margin-top: 10px;
+}
+
+.interest-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.tag {
+    display: inline-block;
+    background-color: var(--gray);
+    color: var(--text);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    user-select: none;
+}
+
+.interest-checkbox:checked + .tag {
+    background-color: var(--primary);
+    color: white;
+    box-shadow: 0 2px 5px rgba(255, 107, 107, 0.3);
+}
+
+.tag:hover {
+    transform: translateY(-2px);
+}
+
+.selected-interests {
+    font-size: 13px;
+    color: var(--text-light);
+    text-align: right;
+    margin-top: 5px;
+}
+
+.selected-count {
+    font-weight: bold;
+    color: var(--primary);
+}
+
+/* Make the tags look more interactive */
+.tag {
+    position: relative;
+    overflow: hidden;
+}
+
+.tag::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    border-radius: 100%;
+    transform: scale(1, 1) translate(-50%, -50%);
+    transform-origin: 50% 50%;
+}
+
+.interest-checkbox:checked + .tag::after {
+    animation: ripple 0.6s ease-out;
+}
+
+@keyframes ripple {
+    0% {
+        transform: scale(0, 0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(20, 20);
+        opacity: 0;
+    }
+}

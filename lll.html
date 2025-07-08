@@ -1,0 +1,221 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HeartMatch - Find Your Perfect Partner</title>
+    <link rel="stylesheet" href="jxtdat.css">
+    <style>
+        /* Basic CSS styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: black;
+            line-height: 1.6;
+        }
+        
+        header {
+            background-color: pink;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: pink;
+            padding: 1rem;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .hero {
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('couple.jpg');
+            background-size: cover;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+        
+        .profile-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 1rem;
+            margin: 1rem;
+            width: 250px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .profile-card img {
+            width: 100%;
+            border-radius: 50%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .profiles-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .btn {
+            background-color: #ff6b6b;
+            color: white;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin: 0.5rem;
+        }
+        
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+        
+        .signup-form {
+            max-width: 500px;
+            margin: 2rem auto;
+            padding: 2rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+        
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>HeartMatch</h1>
+        <p>Find your perfect partner today!</p>
+    </header>
+    
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="browse.html">Browse Profiles</a>
+        <a href="matches.html">Matches</a>
+        <a href="messages.html">Messages</a>
+        <a href="login.html">Login/Signup</a>
+    </nav>
+    
+    <section class="hero">
+        <h2>Ready to Find Love?</h2>
+        <p>Join thousands of singles in your area looking for meaningful connections</p>
+        <a href="#signup free" class="btn">Sign Up Free</a>
+    </section>
+    
+    <section>
+        <h2 style="text-align: center;">Featured Profiles</h2>
+        <div class="profiles-container">
+            <div class="profile-card">
+                <img src="download (5).jpeg" alt="Profile Photo">
+                <h3>Sarah, 28</h3>
+                <p>Artist • New York</p>
+                <p>Loves hiking and painting</p>
+                <a href="#" class="btn">View Profile</a>
+            </div>
+<div class="profile-card">
+                <img src="download (3).jpeg" alt="Profile Photo">
+                <h3>Mike, 32</h3>
+                <p>Engineer • Chicago</p>
+                <p>Passionate about technology and travel</p>
+                <a href="#" class="btn">View Profile</a>
+            </div>
+            
+            <div class="profile-card">
+                <img src="download.jpeg" alt="Profile Photo">
+                <h3>Jessica, 26</h3>
+                <p>Teacher • Boston</p>
+                <p>Enjoys reading and yoga</p>
+                <a href="#" class="btn">View Profile</a>
+            </div>
+        </div>
+    </section>
+    
+    <section id="signup" class="signup-form">
+        <h2>Create Your Free Profile</h2>
+        <form>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="gender">I am a:</label>
+                <select id="gender" name="gender">
+                    <option value="male">Man</option>
+                    <option value="female">Woman</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="seek-gender">Looking for a:</label>
+                <select id="seek-gender" name="seek-gender">
+                    <option value="male">Man</option>
+                    <option value="female">Woman</option>
+                    <option value="both">Both</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" min="18" max="100" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="bio">About Me:</label>
+                <textarea id="bio" name="bio" rows="4"></textarea>
+            </div>
+            
+            <button type="submit" class="btn">Create Profile</button>
+        </form>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 HeartMatch Dating Site. All rights reserved.</p>
+        <p><a href="#" style="color: white;">Privacy Policy</a> | <a href="#" style="color: white;">Terms of Service</a></p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

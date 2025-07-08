@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Matches | HeartMatch</title>
+<link rel="stylesheet" href="matches.css">
+</head>
+<body>
+    <div class="matches-container">
+        <!-- Header -->
+        <header class="matches-header">
+            <h1><i class="fas fa-heart"></i> Your Matches</h1>
+            <div class="match-filters">
+                <div class="filter-dropdown">
+                    <button class="filter-btn">
+                        <i class="fas fa-sliders-h"></i> Filters
+                    </button>
+                    <div class="filter-content">
+                        <div class="filter-section">
+                            <h4>Distance</h4>
+                            <select>
+                                <option>Within 10 miles</option>
+                                <option>Within 25 miles</option>
+                                <option>Within 50 miles</option>
+                                <option>Any distance</option>
+                            </select>
+                        </div>
+                        <div class="filter-section">
+                            <h4>Age Range</h4>
+                            <div class="range-slider">
+                                <span>18</span>
+                                <input type="range" min="18" max="80" value="30" class="slider">
+                                <span>80</span>
+                            </div>
+                            <div class="age-display">18 - 30</div>
+                        </div>
+                        <div class="filter-section">
+                            <h4>Interests</h4>
+                            <div class="interest-tags">
+                                <span class="tag">Travel</span>
+                                <span class="tag">Music</span>
+                                <span class="tag">Sports</span>
+                                <span class="tag">Food</span>
+                                <span class="tag">Art</span>
+                            </div>
+                        </div>
+                        <button class="apply-filters">Apply Filters</button>
+                    </div>
+                </div>
+                <div class="view-toggle">
+                    <button class="view-btn active" data-view="grid"><i class="fas fa-th"></i></button>
+                    <button class="view-btn" data-view="list"><i class="fas fa-list"></i></button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Match Categories -->
+        <div class="match-categories">
+            <button class="category-btn active" data-category="all">All Matches</button>
+            <button class="category-btn" data-category="new">New Today (3)</button>
+            <button class="category-btn" data-category="top">Top Picks</button>
+            <button class="category-btn" data-category="liked">You Liked</button>
+        </div>
+
+        <!-- Matches Grid View -->
+        <div class="matches-grid active-view">
+            <div class="match-card new-match">
+                <div class="match-photo">
+                    <img src="download (5).jpeg" alt="Sarah">
+                    <div class="match-badge">NEW</div>
+                </div>
+                <div class="match-info">
+                    <h3>Sarah, 28</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 5 miles away</p>
+                    <div class="match-percentage">
+                        <div class="percentage-bar" style="width: 92%"></div>
+                        <span>92% Match</span>
+                    </div>
+                    <div class="match-actions">
+                        <button class="like-btn"><i class="fas fa-heart"></i></button>
+                        <button class="message-btn"><i class="fas fa-comment"></i></button>
+                    </div>
+                </div>
+
+</div>
+
+            <div class="match-card">
+                <div class="match-photo">
+                    <img src="download (3).jpeg" alt="Mike">
+                </div>
+                <div class="match-info">
+                    <h3>Mike, 32</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 12 miles away</p>
+                    <div class="match-percentage">
+                        <div class="percentage-bar" style="width: 87%"></div>
+                        <span>87% Match</span>
+                    </div>
+                    <div class="match-actions">
+                        <button class="like-btn"><i class="fas fa-heart"></i></button>
+                        <button class="message-btn"><i class="fas fa-comment"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="match-card top-pick">
+                <div class="match-photo">
+                    <img src="download.jpeg" alt="Jessica">
+                    <div class="match-badge">TOP PICK</div>
+                </div>
+                <div class="match-info">
+                    <h3>Jessica, 26</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 8 miles away</p>
+                    <div class="match-percentage">
+                        <div class="percentage-bar" style="width: 95%"></div>
+                        <span>95% Match</span>
+                    </div>
+                    <div class="match-actions">
+                        <button class="like-btn"><i class="fas fa-heart"></i></button>
+                        <button class="message-btn"><i class="fas fa-comment"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- More match cards -->
+            <div class="match-card">
+                <div class="match-photo">
+                    <img src="profile4.jpg" alt="Alex">
+                </div>
+                <div class="match-info">
+                    <h3>Alex, 30</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 15 miles away</p>
+                    <div class="match-percentage">
+                        <div class="percentage-bar" style="width: 78%"></div>
+                        <span>78% Match</span>
+                    </div>
+                    <div class="match-actions">
+                        <button class="like-btn"><i class="fas fa-heart"></i></button>
+                        <button class="message-btn"><i class="fas fa-comment"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="match-card liked-match">
+                <div class="match-photo">
+                    <img src="profile5.jpg" alt="David">
+                </div>
+                <div class="match-info">
+                    <h3>David, 29</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 20 miles away</p>
+                    <div class="match-percentage">
+                        <div class="percentage-bar" style="width: 85%"></div>
+                        <span>85% Match</span>
+                    </div>
+                    <div class="match-actions">
+                        <button class="like-btn liked"><i class="fas fa-heart"></i></button>
+                        <button class="message-btn"><i class="fas fa-comment"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="match-card">
+                <div class="match-photo">
+                    <img src="profile6.jpg" alt="Emily">
+                </div>
+                <div class="match-info">
+                    <h3>Emily, 27</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 7 miles away</p>
+                    <div class="match-percentage">
+                        <div class="percentage-bar" style="width: 90%"></div>
+                        <span>90% Match</span>
+                    </div>
+                    <div class="match-actions">
+                        <button class="like-btn"><i class="fas fa-heart"></i></button>
+
+<button class="message-btn"><i class="fas fa-comment"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Matches List View (hidden by default) -->
+        <div class="matches-list">
+            <!-- List view content would be similar but structured differently -->
+        </div>
+
+        <!-- Load More Button -->
+        <div class="load-more">
+            <button class="load-more-btn">Load More Matches</button>
+        </div>
+    </div>
+<script src="matches.js"></script>
+</body>
+</html>

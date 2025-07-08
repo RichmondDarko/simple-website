@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Profiles | HeartMatch</title>
+<link rel="stylesheet" href="browse.css">
+<link rel="stylesheet" href="bro.css">
+</head>
+<body>
+    <div class="browse-container">
+        <!-- Search and Filters Section -->
+        <div class="search-filters">
+            <div class="search-bar">
+                <input type="text" placeholder="Search profiles...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            
+            <div class="filters">
+                <div class="filter-group">
+                    <label for="gender">I'm looking for:</label>
+                    <select id="gender">
+                        <option value="all">All Genders</option>
+                        <option value="male">Men</option>
+                        <option value="female">Women</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="age">Age:</label>
+                    <div class="age-range">
+                        <span>18</span>
+                        <input type="range" id="age" min="18" max="60" value="30">
+                        <span>60</span>
+                        <div class="age-value">18 - 60</div>
+                    </div>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="Height">Height:</label>
+                    <select id="Height">
+                        <option value="4 feet">from 4 feet to 4.5 feet</option>
+                        <option value="4.6 feet">from 4.6 feet to 5 feet</option>
+                        <option value="5 feet">from 5 feet to 5.5 feet</option>
+                        <option value="6 feet">anything above 6 feet</option>
+                        <option value="any">however tall they are</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+    <label>Interests:</label>
+    <div class="interest-tags-container">
+        <div class="interest-tags">
+            <input type="checkbox" id="interest-travel" class="interest-checkbox" value="travel" hidden>
+            <label for="interest-travel" class="tag">Travel</label>
+            
+            <input type="checkbox" id="interest-music" class="interest-checkbox" value="music" hidden>
+            <label for="interest-music" class="tag">Music</label>
+            
+            <input type="checkbox" id="interest-sports" class="interest-checkbox" value="sports" hidden>
+            <label for="interest-sports" class="tag">Sports</label>
+            
+            <input type="checkbox" id="interest-food" class="interest-checkbox" value="food" hidden>
+            <label for="interest-food" class="tag">Food</label>
+            
+            <input type="checkbox" id="interest-art" class="interest-checkbox" value="art" hidden>
+            <label for="interest-art" class="tag">Art</label>
+            
+            <input type="checkbox" id="interest-reading" class="interest-checkbox" value="reading" hidden>
+            <label for="interest-reading" class="tag">Reading</label>
+            
+            <input type="checkbox" id="interest-fitness" class="interest-checkbox" value="fitness" hidden>
+            <label for="interest-fitness" class="tag">Fitness</label>
+            
+            <input type="checkbox" id="interest-movies" class="interest-checkbox" value="movies" hidden>
+            <label for="interest-movies" class="tag">Movies</label>
+        </div>
+        <div class="selected-interests">
+            <span class="selected-count">0</span> selected
+        </div>
+    </div>
+</div>
+                
+                <button class="apply-filters">Apply Filters</button>
+                <button class="reset-filters">Reset</button>
+            </div>
+        </div>
+        
+        <!-- Profiles Grid -->
+        <div class="profiles-grid">
+            <!-- Profile Card 1 -->
+            <div class="profile-card" data-gender="female" data-age="28" data-distance="5" data-interests="travel,art,food">
+                <div class="profile-image">
+                    <img src="profile1.jpg" alt="Sarah">
+                    <div class="online-status">Online</div>
+                </div>
+                <div class="profile-info">
+                    <h3>Sarah, 28</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 5 miles away</p>
+                    <div class="profile-interests">
+                        <span>Travel</span>
+                        <span>Art</span>
+                        <span>Food</span>
+                    </div>
+                    <div class="profile-actions">
+                        <button class="like-btn"><i class="far fa-heart"></i></button>
+
+<button class="message-btn">Message</button>
+                        <button class="view-btn">View Profile</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Profile Card 2 -->
+            <div class="profile-card" data-gender="male" data-age="32" data-distance="12" data-interests="sports,music,fitness">
+                <div class="profile-image">
+                    <img src="profile2.jpg" alt="Mike">
+                    <div class="online-status offline">Offline</div>
+                </div>
+                <div class="profile-info">
+                    <h3>Mike, 32</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 12 miles away</p>
+                    <div class="profile-interests">
+                        <span>Sports</span>
+                        <span>Music</span>
+                        <span>Fitness</span>
+                    </div>
+                    <div class="profile-actions">
+                        <button class="like-btn"><i class="far fa-heart"></i></button>
+                        <button class="message-btn">Message</button>
+                        <button class="view-btn">View Profile</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- More profile cards... -->
+            <div class="profile-card" data-gender="female" data-age="26" data-distance="8" data-interests="reading,movies,food">
+                <div class="profile-image">
+                    <img src="profile3.jpg" alt="Jessica">
+                    <div class="online-status">Online</div>
+                </div>
+                <div class="profile-info">
+                    <h3>Jessica, 26</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 8 miles away</p>
+                    <div class="profile-interests">
+                        <span>Reading</span>
+                        <span>Movies</span>
+                        <span>Food</span>
+                    </div>
+                    <div class="profile-actions">
+                        <button class="like-btn"><i class="far fa-heart"></i></button>
+                        <button class="message-btn">Message</button>
+                        <button class="view-btn">View Profile</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="profile-card" data-gender="male" data-age="30" data-distance="15" data-interests="travel,sports,fitness">
+                <div class="profile-image">
+                    <img src="profile4.jpg" alt="Alex">
+                    <div class="online-status">Online</div>
+                </div>
+                <div class="profile-info">
+                    <h3>Alex, 30</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 15 miles away</p>
+                    <div class="profile-interests">
+                        <span>Travel</span>
+                        <span>Sports</span>
+                        <span>Fitness</span>
+                    </div>
+                    <div class="profile-actions">
+                        <button class="like-btn"><i class="far fa-heart"></i></button>
+                        <button class="message-btn">Message</button>
+                        <button class="view-btn">View Profile</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="profile-card" data-gender="male" data-age="29" data-distance="20" data-interests="music,art,movies">
+                <div class="profile-image">
+                    <img src="profile5.jpg" alt="David">
+                    <div class="online-status offline">Offline</div>
+                </div>
+                <div class="profile-info">
+                    <h3>David, 29</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 20 miles away</p>
+                    <div class="profile-interests">
+                        <span>Music</span>
+                        <span>Art</span>
+
+<span>Movies</span>
+                    </div>
+                    <div class="profile-actions">
+                        <button class="like-btn"><i class="far fa-heart"></i></button>
+                        <button class="message-btn">Message</button>
+                        <button class="view-btn">View Profile</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="profile-card" data-gender="female" data-age="27" data-distance="7" data-interests="fitness,food,reading">
+                <div class="profile-image">
+                    <img src="profile6.jpg" alt="Emily">
+                    <div class="online-status">Online</div>
+                </div>
+                <div class="profile-info">
+                    <h3>Emily, 27</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 7 miles away</p>
+                    <div class="profile-interests">
+                        <span>Fitness</span>
+                        <span>Food</span>
+                        <span>Reading</span>
+                    </div>
+                    <div class="profile-actions">
+                        <button class="like-btn"><i class="far fa-heart"></i></button>
+                        <button class="message-btn">Message</button>
+                        <button class="view-btn">View Profile</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Load More Button -->
+        <div class="load-more">
+            <button class="load-more-btn">Load More Profiles</button>
+        </div>
+    </div>
+
+    <script src="browse.js"></script>
+    <script src="bro.js"></script>
+</body>
+</html>
+
+
+
+
+
+
